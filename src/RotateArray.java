@@ -36,8 +36,6 @@ public class RotateArray {
         }
     }
 
-
-
     public static void rotate2(int[] nums, int k) {
 
         int i=0;

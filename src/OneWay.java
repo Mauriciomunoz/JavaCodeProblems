@@ -30,9 +30,11 @@ public class OneWay {
 
     }
 
+    //Time complexity: O(N)
+    //Space complexity: O(1)
     private static boolean editString(String str1, String str2){
 
-        if(str2.length() > str1.length()+1 || str2.length() < str1.length()-1){
+        if(str2.length() > str1.length() + 1 || str2.length() < str1.length() - 1){
             return false;
         }
 

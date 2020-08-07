@@ -14,6 +14,12 @@ public class RotateMatrix {
      * [1 1 0 1]
      * [0 0 0 0]
      *
+     * Matrix transpose
+     * [0 0 0 0]
+     * [1 1 1 0]
+     * [1 0 1 1]
+     * [0 0 0 0]
+     *
      *
      *
      * Started: 8:38pm
@@ -60,11 +66,13 @@ public class RotateMatrix {
         image[2][2] = 9;
 
         int[][] result = rotateMatrix(image);
-        System.out.println(result);
+
 
     }
 
-    //O(n^2)
+    //Time complexity: O(N^2)
+    //Space complexity: O(N)
+    //Using matrix transpose could improve the Space complexity
     private static int[][] rotateMatrix(int[][] image){
         int[][] rotated = new int[image.length][image.length];
 

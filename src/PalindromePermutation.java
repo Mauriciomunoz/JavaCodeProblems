@@ -24,6 +24,9 @@ public class PalindromePermutation {
 
     }
 
+
+    //Time complexity: O(N LogN) it depends of sort method
+    //Space complexity: O(N)
     private static boolean isPalindromePermutation(String str1){
 
         //tac t cat
