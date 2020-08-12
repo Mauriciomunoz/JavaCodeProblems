@@ -1,3 +1,5 @@
+package ArraysAndStrings;
+
 public class WizelineTest1 {
 
     public static void main(String[] args) {
