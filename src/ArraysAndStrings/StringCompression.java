@@ -1,3 +1,5 @@
+package ArraysAndStrings;
+
 public class StringCompression {
     /**
      * Implement a method to perform basic string compression using the counts of repeated characters.
@@ -23,6 +25,8 @@ public class StringCompression {
 
     }
 
+    //Time complexity: O(N)
+    //Space complexity: O(1)
     private static String compressString(String str){
         String strResult = "";
 

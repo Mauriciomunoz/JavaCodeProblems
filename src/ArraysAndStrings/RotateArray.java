@@ -1,3 +1,5 @@
+package ArraysAndStrings;
+
 public class RotateArray {
     public static void main(String[] args) {
 
@@ -35,8 +37,6 @@ public class RotateArray {
             System.out.println(nums);
         }
     }
-
-
 
     public static void rotate2(int[] nums, int k) {
 

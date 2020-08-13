@@ -1,3 +1,5 @@
+package ArraysAndStrings;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collection;
@@ -20,6 +22,8 @@ public class CheckPermutation {
 
     }
 
+    //Time complexity: O(N LogN)
+    //Space complexity: O(N)
     private static boolean checkPermutation(String str1, String str2){
 
         if(str1.length()!=str2.length())
@@ -40,7 +44,9 @@ public class CheckPermutation {
         return true;
     }
 
-
+    //Time complexity: O(N)
+    //Space complexity: O(N)
+    //Internet solution
     static boolean arePermutation(String str1, String str2)
     {
         char[] str1arr = str1.toCharArray();

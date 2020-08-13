@@ -1,3 +1,5 @@
+package ArraysAndStrings;
+
 public class URLify {
 
     //Cracking teh coding interview
@@ -15,6 +17,8 @@ public class URLify {
 
     }
 
+    //Time complexity: O(N)
+    //Space complexity: O(N)
     private static String urlConvertion(String str1){
 
         int count=0;
@@ -24,8 +28,6 @@ public class URLify {
                 count++;
             }
         }
-
-
 
        char[] str1array = new char[str1.length() + (count * 2)];
        char[] strAux = str1.toCharArray();
