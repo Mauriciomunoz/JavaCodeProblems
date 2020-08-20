@@ -19,7 +19,7 @@ public class IsUnique {
 
         String str="achv";
 
-        boolean result = isUnique(str);
+        boolean result = areChractersUnique(str);
         System.out.println(result);
 
     }
