@@ -34,7 +34,7 @@ public class StringCompression {
         int flag = 0;
 
         for(int i = 1; i < str.length(); i++){
-            if(str.charAt(i-1) == str.charAt(i)){
+            if(str.charAt(i - 1) == str.charAt(i)){
                 cont++;
                 flag = 1;
             }else{
