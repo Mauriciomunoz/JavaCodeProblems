@@ -26,7 +26,8 @@ public class StringCompression {
     }
 
     //Time complexity: O(N)
-    //Space complexity: O(1)
+    //Space complexity: O
+    //Use StringBuilder to better memory management
     private static String compressString(String str){
         String strResult = "";
 

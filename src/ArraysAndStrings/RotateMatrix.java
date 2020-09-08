@@ -74,7 +74,7 @@ public class RotateMatrix {
 
     //Time complexity: O(N^2)
     //Space complexity: O(N)
-    //Using matrix transpose could improve the Space complexity
+    //Using matrix transpose could improve the Space complexity check Rotate Image Algorithm
     private static int[][] rotateMatrix(int[][] image){
         int[][] rotated = new int[image.length][image.length];
 
