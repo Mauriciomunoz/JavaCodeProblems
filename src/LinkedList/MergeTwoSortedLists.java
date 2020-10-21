@@ -35,7 +35,7 @@ public class MergeTwoSortedLists {
        //list2node1.next = list2node2;
 
 
-        ReverseLinkedList.ListNode h;
+        ListNode h;
         mergeTwoLists(head, head2);
     }
 
