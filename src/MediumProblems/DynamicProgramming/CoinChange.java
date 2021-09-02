@@ -49,14 +49,72 @@ public class CoinChange {
 
     public static void main(String[] args) {
 
-        int[] array = {186,419,83,408};
+        //int[] array = {186,419,83,408};
+        int[] array = {2,5};
 
-        int result = coinChange(array, 6249);
+        int result = coinChange(array, 11);
 
         System.out.println("DONE");
     }
-
     static public int coinChange(int[] coins, int amount) {
+        int[] coinAmounts = new int[amount + 1];
+
+        for(int i = 0; i < coinAmounts.length; i++){
+            coinAmounts[i] = Integer.MAX_VALUE;
+        }
+
+        coinAmounts[0] = 0;
+
+        for(int i = 0; i < coins.length; i++){
+            for(int j = coins[i]; j <= amount; j++){
+                if(coinAmounts[j - coins[i]] != Integer.MAX_VALUE)
+                    coinAmounts[j] = Math.min(coinAmounts[j - coins[i]] + 1, coinAmounts[j]);
+            }
+        }
+
+        if(coinAmounts[amount] != Integer.MAX_VALUE)
+            return coinAmounts[amount];
+        else
+            return -1;
+
+    }
+
+
+    static public int coinChangeTry(int[] coins, int amount) {
+        int[] coinAmounts = new int[amount + 1];
+
+        for(int i = 0; i < coins.length; i++){
+            coinAmounts[coins[i]] = 1;
+        }
+
+        int firstCoin = 0;
+        for(; firstCoin < coinAmounts.length; firstCoin++){
+            if(coinAmounts[firstCoin] == 1)
+                break;
+        }
+
+        for(int coinIndex = firstCoin; coinIndex < coinAmounts.length; coinIndex++){
+
+        }
+
+        int maxCoin = 0;
+        for(int j = firstCoin; j < coinAmounts.length; j++){
+            if(coinAmounts[j] == 0){
+                int rest = j % maxCoin;
+                int n = j / maxCoin;
+                if(coinAmounts[rest] == 0 && rest != 0)
+                    coinAmounts[j] = -1;
+                else
+                    coinAmounts[j] = (n * coinAmounts[maxCoin]) + coinAmounts[rest];
+            }else{
+                maxCoin = j;
+            }
+        }
+
+        return coinAmounts[amount];
+    }
+
+    static public int coinChangeWrong(int[] coins, int amount) {
         int result = 0;
 
         Arrays.sort(coins);

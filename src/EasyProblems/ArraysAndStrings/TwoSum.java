@@ -46,7 +46,7 @@ public class TwoSum {
         return result;
     }
 
-    //TC: O(N LogN)
+    //TC: O(N LogN) + O(N) + O(N) = O(3NLogN) = NlogN
     //SC: O(N)
     public static int[] twoSum2(int[] nums, int target) {
 
@@ -57,11 +57,13 @@ public class TwoSum {
             copyNums[i] = nums[i];
         }
 
+        //O(NLogN))
         Arrays.sort(nums);
 
         int posLeft = nums.length - 1;
         int posRight = 0;
 
+        //O(N)
         while(posLeft > 0){
             int val = nums[posLeft];
             if(nums[posRight] == (target - val)){
@@ -76,7 +78,7 @@ public class TwoSum {
                 }
             }
         }
-
+        //O(N)
         for(int i = 0; i < copyNums.length; i++){
             if(copyNums[i] == result[0]){
                 result[0] = i;
@@ -97,6 +99,19 @@ public class TwoSum {
     //SC: O(1)
     public static int[] twoSum3(int[] nums, int target) {
         //{0,4,3,0};
+
+        /*
+
+         int[] nums = {3,2,12,7,15};
+         k = 9
+
+
+         HM = 6, 7, 4,
+         7 - 9 = 2
+
+
+
+         */
         HashMap<Integer, Integer> hm = new HashMap<>();
         int[] result = new int[2];
         int val = 0;

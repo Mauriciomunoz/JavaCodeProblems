@@ -20,8 +20,8 @@ public class SummingTwoStrings_FB_Interview {
         char c = 'c';
         System.out.println(c - 'a');
 
-        char c2 = '1';
-        System.out.println(c2 - '0');
+        char c2 = '2';
+        System.out.println(c2 - '3');
 
         System.out.println("Result is " + sumTwoStrings("999","1"));
     }

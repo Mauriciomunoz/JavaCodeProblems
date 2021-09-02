@@ -22,6 +22,7 @@ public class MoveZeroes {
         int[] nums = {1,0,3,0,12,0};
         moveZeroes2(nums);
 
+        System.out.println("DONE");
     }
 
 
@@ -48,19 +49,40 @@ public class MoveZeroes {
 
     //TC: O(N)
     //SC: O(1)
+    //{1,0,3,0,12,0};
     public static void moveZeroes2(int[] nums) {
         int pos = 0;
 
         for(int i = 0; i < nums.length; i++){
             if(nums[i] != 0){
+
+                int temp = nums[pos];
                 nums[pos] = nums[i];
+                nums[i] = temp;
                 pos++;
             }
         }
-
+/*
         for(int j = pos; j < nums.length; j++){
             nums[j] = 0;
+        }*/
+    }
+
+    public static void moveZeroesLeetCode(int[] nums) {
+        int left = 0;
+        int right = 0;
+        while (right < nums.length) {
+            if (nums[right] != 0) {
+                swap(nums, left++, right);
+            }
+            right++;
         }
+    }
+
+    private static void swap(int[] nums, int left, int right) {
+        int temp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = temp;
     }
 
 }
