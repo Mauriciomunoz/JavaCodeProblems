@@ -23,8 +23,9 @@ public class FB_Interview_VacationDays {
 
     public static void main(String[] args) {
 
-        boolean[] schedule = {false, true, true, false, false, true, true, true , true};
-        int pod = 1;
+        //boolean[] schedule = {false, true, true, false, false, true, true, true , true};
+        boolean[] schedule = {false, false, false, true, true, false, false, false , true, true, true, true};
+        int pod = 2;
 
         System.out.println(maxVacation(schedule, pod));
     }
@@ -36,7 +37,8 @@ public class FB_Interview_VacationDays {
         int end = 0;
         int length = 0;
 
-        Stack<Integer> pods = new Stack<>();
+        //Stack<Integer> pods = new Stack<>();
+        Queue<Integer> pods = new LinkedList<>();
 
         while (end < schedule.length){
             if(schedule[end] == true){
@@ -51,7 +53,7 @@ public class FB_Interview_VacationDays {
                     if(length > best_length){
                         best_length = length;
                     }
-                    start = pods.pop();
+                    start = pods.poll();
                     pod++;
                 }
             }

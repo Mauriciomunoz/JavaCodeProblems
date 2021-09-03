@@ -111,7 +111,7 @@ Set - VALUE  | HASHSET
 
     }
 
-
+/*
     public static int searchRepeated2(int[] array){
         int length = array.length;
 
@@ -132,7 +132,7 @@ Set - VALUE  | HASHSET
         return -1;
 
     }
-
+*/
     public static int searchSameValue(int[] array1, int[] array2){
 
         //array1 = { 1, 2, 3, 4} - N
